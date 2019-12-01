@@ -1,17 +1,10 @@
 const { Composer } = require('micro-bot')
-const asciimath2latex = require('asciimath-to-latex')
+const { getFormulaUrl } = require('botFunctions')
 const logger = require('pino')({
     prettyPrint: true
 })
 
 const bot = new Composer()
-
-function getFormulaUrl(text) {
-    const latex = asciimath2latex(text)
-    const uri = encodeURIComponent(latex)
-    const url = `https://math.now.sh?inline=${uri}.png`
-    return url
-}
 
 bot.use(async (ctx, next) => {
     logger.info(`Received ${ctx.message.text}`)
@@ -23,7 +16,6 @@ bot.start(ctx => {
 })
 
 bot.command('math', ctx => {
-    // logger.info(`@${ctx.from.username} => ${ctx.message.text}`)
     let formula = ctx.message.text.split(' ')
     formula.shift()
     formula = formula.join('')
@@ -32,7 +24,6 @@ bot.command('math', ctx => {
 })
 
 bot.on('text', ctx => {
-    // logger.info(`@${ctx.from.username} => ${ctx.message.text}`)
     if (ctx.message.chat.type !== 'private') return
     const url = getFormulaUrl(ctx.message.text)
     ctx.replyWithPhoto(url)

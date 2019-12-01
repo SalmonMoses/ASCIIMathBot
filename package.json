@@ -5,12 +5,15 @@
   "bin": "bot.js",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "micro-bot -t 881556390:AAHJQCZoHDJMOlJjtirghnZByzUCWY24MPM"
   },
   "dependencies": {
     "asciimath-to-latex": "^0.3.2",
+    "chai": "^4.2.0",
     "micro-bot": "^2.5.3",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
     "pino": "^5.14.0",
     "pino-pretty": "^3.4.0",
     "telegraf": "^3.34.1"
