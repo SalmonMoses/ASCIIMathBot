@@ -1,0 +1,8 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/703b335c-3c64-47a6-a9c5-8c0351ceaa36/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/asciimathbot",
+    "appService.deploySubpath": "",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ]
+}
