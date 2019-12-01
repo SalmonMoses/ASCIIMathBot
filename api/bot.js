@@ -1,7 +1,7 @@
 const Telegraf = require('telegraf')
 const asciimath2latex = require('asciimath-to-latex')
 
-const bot = new Telegraf('881556390:AAHJQCZoHDJMOlJjtirghnZByzUCWY24MPM')
+const bot = new Telegraf()
 
 function getFormulaUrl(text) {
     console.log(text)
