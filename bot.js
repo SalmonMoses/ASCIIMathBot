@@ -19,7 +19,7 @@ bot.start(ctx => {
 })
 
 bot.command('math', ctx => {
-    logger.info(`${ctx.from.username}: ${ctx.message.text}`)
+    logger.info(`${ctx.from.username} => ${ctx.message.text}`)
     let formula = ctx.message.text.split(' ')
     formula.shift()
     formula = formula.join('')
@@ -28,7 +28,7 @@ bot.command('math', ctx => {
 })
 
 bot.on('text', ctx => {
-    logger.info(`${ctx.from.username}: ${ctx.message.text}`)
+    logger.info(`${ctx.from.username} => ${ctx.message.text}`)
     if (ctx.message.chat.type !== 'private') return
     const url = getFormulaUrl(ctx.message.text)
     ctx.replyWithPhoto(url)
