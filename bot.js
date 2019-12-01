@@ -14,12 +14,11 @@ function getFormulaUrl(text) {
 }
 
 bot.use(async (ctx, next) => {
-    logger.info(`@${ctx.from.username} => ${ctx.message.text}`)
+    logger.info(`Received ${ctx.message.text}`)
     await next()
 })
 
 bot.start(ctx => {
-    logger.info(`${ctx.from.username} started using the bot!`)
     ctx.replyWithMarkdown('Welcome to LaTeX bot by [@SalmonMoses](tg://user?id=149477622)! You can check LaTeX documentation [here](https://www.latex-project.org/help/documentation/) and ASCIIMath [here](http://asciimath.org/)')
 })
 
