@@ -7,7 +7,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bot.js",
-    "build": "pkg package.json -t lastest-linux-x64 --out-path public"
   },
   "dependencies": {
     "asciimath-to-latex": "^0.3.2",
