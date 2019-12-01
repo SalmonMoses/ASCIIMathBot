@@ -1,5 +1,5 @@
 const { Composer } = require('micro-bot')
-const { getFormulaUrl } = require('botFunctions')
+const { getFormulaUrl } = require('./botFunctions')
 const logger = require('pino')({
     prettyPrint: true
 })
