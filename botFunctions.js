@@ -1,4 +1,5 @@
 const asciimath2latex = require('asciimath-to-latex')
+const logger = require('./logger')
 
 function getFormulaUrl(text) {
     const latex = asciimath2latex(text)
