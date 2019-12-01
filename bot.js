@@ -38,4 +38,6 @@ bot.on('inline_query', ctx => {
 
 console.log("Started!")
 
-bot.launch()
+module.exports = (req, res) => {
+    bot.handleUpdate(req.body, res)
+}
